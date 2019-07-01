@@ -1,0 +1,52 @@
+{% extends 'main/index.html' %}
+{% block content %}
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Add Website
+        <small>Add Website</small>
+      </h1>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title">Horizontal Form</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form method ="post" class="form-horizontal">
+                {% csrf_token %}
+              <div class="box-body">
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Website Address</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="web_address" id="inputEmail3" placeholder="http://example.com">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-2 control-label">Time Interval(in minutes)</label>
+
+                  <div class="col-sm-10">
+                    <input type="number" name="interval_time" class="form-control" id="inputPassword3" placeholder="Only Numbers">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Verify String</label>
+
+                  <div class="col-sm-10">
+                    <textarea class="form-control" name="verify_string" rows="3" placeholder="Enter Verify String"></textarea>
+                  </div>
+                </div>
+              </div>
+              <!-- /.box-body -->
+              <div class="box-footer">
+                <button type="submit" class="btn btn-info pull-right">Add</button>
+              </div>
+              <!-- /.box-footer -->
+            </form>
+          </div>
+    </section>
+{% endblock %}
