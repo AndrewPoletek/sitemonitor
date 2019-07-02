@@ -7,7 +7,7 @@ from time import sleep
 class websitesMonitor:
 
     def connectionToDB(self, type, query):
-        connectionToDB = MySQLdb.connect('localhost', 'sitemonitor', '68aQHo6sNUO4DcUg', "sitemonitor")
+        connectionToDB = MySQLdb.connect('localhost', 'sitemonitor', 'somepass', "sitemonitor")
         cursorDB = connectionToDB.cursor()
         if type == 'insert':
             cursorDB.execute(query)

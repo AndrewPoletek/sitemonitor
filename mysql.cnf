@@ -1,5 +1,5 @@
 [client]
 database = sitemonitor
 user = sitemonitor
-password = 68aQHo6sNUO4DcUg
+password = somepass
 default-character-set = utf8
