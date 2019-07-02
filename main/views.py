@@ -47,3 +47,9 @@ def statusWebsites(request, id):
 
     print(lastStatus[0].status.find('<Response'))
     return HttpResponse(str(response))
+
+def showAll(request, id):
+    website = websites.objects.get(id=id)
+    statuses = connection_log.objects.filter(website_address=website.website_address).order_by('-id')[0:30]
+    template = 'main/showAll.html'
+    return render(request, template, {'website': website.website_address, 'statuses' : statuses})

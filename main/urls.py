@@ -23,6 +23,7 @@ urlpatterns = [
     path('addWebsite', views.addWebsite),
     path('accounts/', include('django.contrib.auth.urls')),
     path('checkWebsites', views.checkWebsites),
-    path('statusWebsites/<int:id>', views.statusWebsites)
+    path('statusWebsites/<int:id>', views.statusWebsites),
+    path('showAll/<int:id>', views.showAll)
 ]
 
