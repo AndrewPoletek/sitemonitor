@@ -21,6 +21,7 @@ from . import views
 urlpatterns = [
     path('', views.index),
     path('addWebsite', views.addWebsite),
-    path('accounts/', include('django.contrib.auth.urls'))
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('checkWebsites', views.checkWebsites)
 ]
 

@@ -1,5 +1,10 @@
 {% extends 'main/index.html' %}
 {% block content %}
+            <div style="display:none" id="success_add" class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <h4><i class="icon fa fa-check"></i> Success!</h4>
+                Your Website is add to monitor.
+              </div>
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
@@ -49,4 +54,14 @@
             </form>
           </div>
     </section>
+<script>
+    var added = 0;
+    {% if added %}
+        added = 1;
+    {% endif %}
+    if(added){
+        //$('#success_add').show();
+        document.getElementById("success_add").style=""
+    }
+</script>
 {% endblock %}
